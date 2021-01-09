@@ -1,5 +1,6 @@
 import React from "react"
-import "./button.css"
+import cx from "classnames"
+import styles from "./button.module.scss"
 
 export interface ButtonProps {
   /**
@@ -33,20 +34,22 @@ export const Button: React.FC<ButtonProps> = ({
   backgroundColor,
   label,
   ...props
-}) => {
-  const mode = primary
-    ? "storybook-button--primary"
-    : "storybook-button--secondary"
-  return (
-    <button
-      type="button"
-      className={["storybook-button", `storybook-button--${size}`, mode].join(
-        " ",
-      )}
-      style={{ backgroundColor }}
-      {...props}
-    >
-      {label}
-    </button>
-  )
-}
+}) => (
+  <button
+    type="button"
+    className={cx([
+      styles.button,
+      {
+        [styles.small]: size === "small",
+        [styles.medium]: size === "medium",
+        [styles.large]: size === "large",
+        [styles.primary]: primary,
+        [styles.secondary]: !primary,
+      },
+    ])}
+    style={{ backgroundColor }}
+    {...props}
+  >
+    {label}
+  </button>
+)

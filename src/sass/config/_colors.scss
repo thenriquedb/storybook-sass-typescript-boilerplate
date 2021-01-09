@@ -1,7 +1,7 @@
-$primary-color: #55c;
-$secondary-color: #553;
+$color-primary: #88f;
+$color-secondary: #fff;
 
 :export {
-  primaryColor: $primary-color;
-  secondaryColor: $secondary-color;
+  primaryColor: $color-primary;
+  secondaryColor: $color-secondary;
 }
