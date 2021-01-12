@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "target": "es5",
-    
     "lib": [
       "dom",
       "dom.iterable",
@@ -21,11 +20,13 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "baseUrl": "./src",
-    "declaration": true,
-    "paths": {
-      "packages/": ["src/packages/*"],
-      "sass/": ["src/sass/*"],
-    }
+    "declaration": true
   },
-  "exclude": ["node-modules", "build"]
+  "exclude": [
+    "node-modules",
+    "build"
+  ],
+  "include": [
+    "src"
+  ]
 }

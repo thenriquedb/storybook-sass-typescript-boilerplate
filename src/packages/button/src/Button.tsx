@@ -4,6 +4,10 @@ import styles from "./button.module.scss"
 
 export interface ButtonProps {
   /**
+   * Loading state
+   */
+  loading?: boolean
+  /**
    * Is this the principal call to action on the page?
    */
   primary?: boolean
@@ -33,6 +37,8 @@ export const Button: React.FC<ButtonProps> = ({
   size = "medium",
   backgroundColor,
   label,
+  loading,
+  onClick,
   ...props
 }) => (
   <button
@@ -48,8 +54,9 @@ export const Button: React.FC<ButtonProps> = ({
       },
     ])}
     style={{ backgroundColor }}
+    onClick={loading ? undefined : onClick}
     {...props}
   >
-    {label}
+    {loading ? "Loading" : label}
   </button>
 )
