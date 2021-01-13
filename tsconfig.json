@@ -20,7 +20,11 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "baseUrl": "./src",
-    "declaration": true
+    "declaration": true,
+    "paths": {
+      "packages/": ["packages/*"],
+      "sass/": ["sass/*"],
+    }
   },
   "exclude": [
     "node-modules",
