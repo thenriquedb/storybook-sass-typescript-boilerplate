@@ -2,5 +2,5 @@
 
 - Created first version of the design system, with `Button` component.
 
-#### Authors: 1
+#### Author
 - Thiago Henrique Domingues ([@thenriquedb](https://github.com/thenriquedb))
