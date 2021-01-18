@@ -1,0 +1,58 @@
+import { Meta, Story, Canvas, Preview } from "@storybook/addon-docs/blocks"
+import { Button, ButtonProps } from "../src/"
+
+<Meta
+  title="MDX/Button"
+  component={Button}
+  argTypes={{
+    backgroundColor: { control: "color" },
+    loading: { control: "boolean" },
+    primary: { control: "boolean" },
+    label: { control: "string" },
+  }}
+/>
+
+export const Template = (args) => <YourComponent {...args} />
+
+# Button
+
+With `MDX` we can define a story for `Checkbox` right in the middle of our
+Markdown documentation.
+
+# Sizes
+
+### Primary
+
+<Preview>
+  <Story name="Primary">
+    <div>
+      <Button primary label="Small" size="small" />
+      <Button primary label="Medium" size="medium" />
+      <Button primary label="Large" size="large" />
+    </div>
+  </Story>
+</Preview>
+
+### Secondary
+
+<Preview>
+  <Story name="Secondary">
+    <div>
+      <Button primary={false} label="Small" size="small" />
+      <Button primary={false} label="Medium" size="medium" />
+      <Button primary={false} label="Large" size="large" />
+    </div>
+  </Story>
+</Preview>
+
+### Loading
+
+<Preview>
+  <Story name="Loading">
+    <div>
+      <Button primary={false} loading label="Small" size="small" />
+      <Button primary={false} loading label="Medium" size="medium" />
+      <Button primary={false} loading label="Large" size="large" />
+    </div>
+  </Story>
+</Preview>
