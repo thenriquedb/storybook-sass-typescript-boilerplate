@@ -1,7 +1,7 @@
 {
-  "name": "storybook-init",
+  "name": "thenriquedb-learnstorybook-design-system",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "classnames": "^2.2.6",
     "node-sass": "4.12"
@@ -69,5 +69,10 @@
     "style-loader": "^2.0.0",
     "typescript": "^4.0.3",
     "web-vitals": "^0.2.4"
-  }
+  },
+  "description": "My first NPM package!",
+  "main": "src/index.js",
+  "repository": "git@github.com:thenriquedb/sass-storybook-quickstart.git",
+  "author": "thiago <thenrique2012@gmail.com>",
+  "license": "MIT"
 }
