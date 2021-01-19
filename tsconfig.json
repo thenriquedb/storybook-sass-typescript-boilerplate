@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "skipLibCheck": true,
     "target": "es5",
     "lib": [
       "dom",
@@ -7,7 +8,6 @@
       "esnext"
     ],
     "allowJs": true,
-    "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
@@ -19,18 +19,18 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "baseUrl": "./src",
+    "baseUrl": "./",
+    "rootDir": "./src",       /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
+    "outDir": "./dist",
+    "jsx": "react",                       /* Redirect output structure to the directory. */
     "declaration": true,
     "paths": {
-      "packages/": ["packages/*"],
-      "sass/": ["sass/*"],
+      "packages/": ["src/packages/*"],
+      "sass/": ["src/sass/*"],
     }
   },
   "exclude": [
     "node-modules",
-    "build"
+    "build",
   ],
-  "include": [
-    "src"
-  ]
 }

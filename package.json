@@ -1,6 +1,11 @@
 {
   "name": "thenriquedb-learnstorybook-design-system",
   "version": "0.1.0",
+  "description": "My first NPM package!",
+  "repository": "git@github.com:thenriquedb/sass-storybook-quickstart.git",
+  "author": "thiago <thenrique2012@gmail.com>",
+  "license": "MIT",
+  "main": "./dist/index.js",
   "private": false,
   "dependencies": {
     "classnames": "^2.2.6",
@@ -8,7 +13,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "cross-env BABEL_ENV=production babel src -d dist",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint src --max-warnings=0",
@@ -29,6 +34,9 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/preset-react": "^7.12.10",
+    "@babel/preset-typescript": "^7.12.7",
     "@storybook/addon-actions": "^6.1.11",
     "@storybook/addon-essentials": "^6.1.11",
     "@storybook/addon-links": "^6.1.11",
@@ -50,6 +58,7 @@
     "@typescript-eslint/parser": "^4.11.1",
     "auto": "^10.10.0",
     "babel-loader": "^8.2.2",
+    "cross-env": "^7.0.3",
     "css-loader": "^5.0.1",
     "eslint": "^7.17.0",
     "eslint-config-airbnb": "^18.2.1",
@@ -69,10 +78,5 @@
     "style-loader": "^2.0.0",
     "typescript": "^4.0.3",
     "web-vitals": "^0.2.4"
-  },
-  "description": "My first NPM package!",
-  "main": "src/index.js",
-  "repository": "git@github.com:thenriquedb/sass-storybook-quickstart.git",
-  "author": "thiago <thenrique2012@gmail.com>",
-  "license": "MIT"
+  }
 }
