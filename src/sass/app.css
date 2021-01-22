@@ -1,0 +1,15 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: 0;
+  font-family: "Nunito Sans", Helvetica, Arial, sans-serif; }
+
+button {
+  cursor: pointer;
+  font-weight: 400; }
+
+button,
+input,
+textarea {
+  font-family: "Nunito Sans", Helvetica, Arial, sans-serif; }

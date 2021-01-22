@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "skipLibCheck": true,
     "target": "es5",
     "lib": [
       "dom",
@@ -9,6 +8,7 @@
     ],
     "allowJs": true,
     "esModuleInterop": true,
+    "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
@@ -17,20 +17,23 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx",
+    // "noEmit": true,
     "baseUrl": "./",
-    "rootDir": "./src",       /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
-    "outDir": "./dist",
-    "jsx": "react",                       /* Redirect output structure to the directory. */
+    // "rootDir": ".",                   /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
+    "outDir": "lib",
+    "jsx": "react",          
     "declaration": true,
     "paths": {
       "packages/": ["src/packages/*"],
       "sass/": ["src/sass/*"],
     }
   },
+  "include": ["src"],
   "exclude": [
     "node-modules",
     "build",
+    "src/packages/**/tests/*.spec.tsx",
+    "src/packages/**/tests/*.test.tsx",
+    "src/packages/**/stories/*.stories.tsx",
   ],
 }

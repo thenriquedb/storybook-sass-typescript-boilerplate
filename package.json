@@ -8,12 +8,12 @@
   "main": "./dist/index.js",
   "private": false,
   "dependencies": {
-    "classnames": "^2.2.6",
-    "node-sass": "4.12"
+    "classnames": "^2.2.6"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "cross-env BABEL_ENV=production babel src -d dist",
+    "build:css": "node-sass src/ -o src/ --output-style compressed",
+    "build": "tsc --build \"./tsconfig.json\"",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint src --max-warnings=0",
@@ -70,6 +70,7 @@
     "eslint-plugin-react": "^7.20.3",
     "eslint-plugin-react-hooks": "^4.0.8",
     "eslint-plugin-testing-library": "^3.10.1",
+    "node-sass": "4.12",
     "prettier": "^2.2.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
